@@ -1,22 +1,26 @@
 const imgBox = document.querySelector('.imgBox');
-const whiteBoxes = document.getElementsByClassName('whiteBox');
+// const whiteBoxes = document.getElementsByClassName('whiteBox');
+const whiteBoxes = document.querySelector('.whiteBox');
 
 // Event listeners for draggable element imgBox
-imgBox.addEventListener('dragstart', (e) => {
-    console.log('DragStart has been triggered');
-    e.target.className += ' hold';
+// imgBox.addEventListener('dragstart', (e) => {
+    // console.log('DragStart has been triggered');
+    // e.target.className += ' hold';
     // setTimeout(() => {
-    //     e.target.className = 'hide';
+    //     e.img.className = 'hide';
     // }, 0);
 
+// });
+let c=0;
+whiteBoxes.addEventListener('dragend', (e) => {
+    console.log('DragEnd has been triggered');
+	c=1;
+	console.log(e);
+	console.log(e.target);
+    e.classList.add('hide');
 });
 
-imgBox.addEventListener('dragend', (e) => {
-    // console.log('DragEnd has been triggered');
-    e.target.className = 'imgBox';
-});
-
-for (whiteBox of whiteBoxes) {
+// for (whiteBox of whiteBoxes) {
     // whiteBox.addEventListener('dragover', (e) => {
     //     e.preventDefault();
     //     // console.log('DragOver has been triggered');
@@ -36,7 +40,7 @@ for (whiteBox of whiteBoxes) {
     //     console.log('Drop has been triggered');
     //     e.target.append(imgBox);
     // })
-}
+// }
 
 
 
@@ -60,7 +64,9 @@ input.addEventListener('change', () => {
 	for (let i = 0; i < file.length; i++) {
 		if (files.every(e => e.name !== file[i].name)) files.push(file[i])
 	}
-
+	if(c==1){
+		whiteBoxes
+	}
 	form.reset();
 	showImages();
 })
