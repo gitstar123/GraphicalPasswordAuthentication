@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN-Up</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" media="screen and (max-width: 760px)" href="css/phone.css">
+    <script defer src="js/index1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f22b6a456b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <center class="heading">
+            <h1>Registration Form</h1>
+        </center>
+        <div>
+            <form action="/Signup" class="form" method="POST">
+                <div class="tag">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <br>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <span class="errorM">Name is too short!!!</span>
+                </div>
+                <div class="tag">
+                    <input type="text" id="Uname" placeholder="UserName" required>
+                    <br>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <span class="errorM">UserName is invalid!!!</span>
+                </div>
+                <br>
+                <div class="tag">
+                    <input type="text" name="email" id="email" placeholder="Email" required/>
+                    <br>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <span class="errorM">Eamil is not valid!!!</span>
+                    <br>
+                </div>
+
+                <div class="tag">
+                    <input type="number" name="phoneNo" placeholder="Phone Number" id="number" required/>
+                    <br>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <span class="errorM">PhoneNumber should contain 10 Numbers</span>
+                </div>
+                <br>
+                <!-- <div class="tag">
+                    <input type="password" id="Password" placeholder="Password" required>
+                    <br>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <span class="errorM">Password is invalid!! (useAny:'$','&','#,'@')</span>
+                </div> -->
+                <div class="tag">
+                    <a href="/index2.html" id="Password"><span>Password</span></a>
+                </div>
+                <!-- <div class="tag">
+                    <input type="password" id="Cpassword" placeholder="Confirm Password" required>
+                    <br>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <span class="errorM">Password does not match!!!</span>
+                </div> -->
+
+                <div id="radiogroup">
+                    <label id="glabel" for="gender">Gender</label>
+                    <div class="radiobtn">
+                        <input type="radio" name="gender" value="male" class="gender" checked>Male
+                        <input type="radio" name="gender" value="Female" class="gender">Female
+                        <input type="radio" name="gender" value="others" class="gender">Prefer not to say
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <div>
+                        <button type="submit" class="btn btn1" id="button">Register</button>
+                    </div>
+                </div>
+                <br>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
