@@ -1,6 +1,5 @@
 const imgBox = document.querySelector('.imgBox');
-// const whiteBoxes = document.getElementsByClassName('whiteBox');
-const whiteBoxes = document.querySelector('.whiteBox');
+const whiteBoxes = document.getElementsByClassName('whiteBox');
 
 // Event listeners for draggable element imgBox
 // imgBox.addEventListener('dragstart', (e) => {
@@ -11,14 +10,12 @@ const whiteBoxes = document.querySelector('.whiteBox');
     // }, 0);
 
 // });
-let c=0;
-whiteBoxes.addEventListener('dragend', (e) => {
-    console.log('DragEnd has been triggered');
-	c=1;
-	console.log(e);
-	console.log(e.target);
-    e.classList.add('hide');
-});
+
+// imgBox.addEventListener('dragend', (e) => {
+//     console.log('DragEnd has been triggered');
+// 	console.log(e.target)
+//     e.target.children[0].classList.add('hide');
+// });
 
 // for (whiteBox of whiteBoxes) {
     // whiteBox.addEventListener('dragover', (e) => {
@@ -58,15 +55,13 @@ input = document.querySelector('form input');
 browse.addEventListener('click', () => input.click());
 
 // input change event
-input.addEventListener('change', () => {
+const fn = input.addEventListener('change', () => {
 	let file = input.files;
 
 	for (let i = 0; i < file.length; i++) {
 		if (files.every(e => e.name !== file[i].name)) files.push(file[i])
 	}
-	if(c==1){
-		whiteBoxes
-	}
+
 	form.reset();
 	showImages();
 })
