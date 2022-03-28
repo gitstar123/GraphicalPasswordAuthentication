@@ -8,6 +8,7 @@ body {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
+	flex-direction:column;
 	justify-content: center;
 	align-items: center;
 	font-size: 14px;
@@ -140,4 +141,43 @@ form.dragover {
 
 .container .image span:hover {
 	opacity: 0.8;
+}
+
+ /* ------ */
+ .content{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items:center;
+	margin-bottom: 10px; 
+ }
+
+.imgBox > img{
+    /* background-image: url(''); */
+    position: relative;
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}
+
+.whiteBox{
+    display: inline-block;
+    height: 155px;
+    width: 155px;
+    margin: 10px;
+    background-color: white;
+    border: 3px black solid;
+}
+
+.hold{
+    border: solid grey 4px;
+}
+
+.dashed{
+    background: rgb(214, 206, 206);
+    border-style: dashed;
+}
+
+.hide{
+    display: none;
 }
