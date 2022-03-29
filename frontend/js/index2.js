@@ -114,7 +114,11 @@ form.addEventListener('drop', e => {
 
 button.addEventListener('click', () => {
 	let form = new FormData();
-	files.forEach((e, i) => form.append(`file[${i}]`, e))
+	files.forEach((e, i) => {
+	form.append(`file[${i}]`, e)
+	// delImage(i);
+});
+
 
 	// now you can send the image to server using FETCH API
 	
