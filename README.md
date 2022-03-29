@@ -1,6 +1,6 @@
 # GraphicalPasswordAuthentication
 # run frontend/index.html
-
+# run backend/npm run dev
 # Install Dependencies
 
 **For Backend** - `npm i`
